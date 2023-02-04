@@ -1,11 +1,6 @@
 
 const productDiv=document.getElementById("all-product");
 // const productPrice=document.getElementById("product-price");
-
-
-
-
-
 fetch("product.json")
 .then(function(res){
     return res.json();
@@ -14,7 +9,7 @@ fetch("product.json")
   
     for(let i=0;i<data.length;i++){
       productDiv.innerHTML +=`
-      <div class="col-lg-4">
+      <div class="col-lg-4 py-5 g-2">
       <div class="single-product">
           <img src="${data[i].image}" alt="">
           <h5>$ <span id="product-price">${data[i].price}</span></h5>
